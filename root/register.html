@@ -2,23 +2,26 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link href="reset.css" rel="stylesheet" type="text/css">
+    <link href="register.css" rel="stylesheet" type="text/css">
     <title>Register</title>
 </head>
-<nav><a href="http://localhost:63342/untitled/index.html?_ijt=jobvr9pphafebcte2tjprj4s2a">主页</a></nav>
+
+<body>
+<header><nav><a href="http://localhost:63342/untitled/.idea/lab/index.html?_ijt=d60etl9g2gf0r20e3d6cscmo3n">主页</a></nav></header>
 <h1>创建账户</h1>
 <section>
-    <form>
-        <form action="/demo/demo_form.asp">
-            用户名(大小写字母、数字和下划线)<br>
-            <input type="username" name="username" value="" pattern="^\w{3,20}$">
+        <form action="#" method="GET">
+            <p>用户名(大小写字母、数字和下划线)<br>
+            <input type="username" name="username" value="" pattern="^\w{3,20}$"></p>
             <br>
-            请设置密码(密码要求 8 位以上，只允许大小写字母加数字)<br>
-            <input type="password" name="password" pattern="^[A-Za-z0-9]+$">
+            <p>请设置密码(密码要求 8 位以上，只允许大小写字母和数字)<br>
+            <input type="password" name="password" pattern="^[A-Za-z0-9]+$"></p>
             <br>
-            请确认密码<br>
-            <input type="password" name="password" pattern="^[A-Za-z0-9]+$">
+            <p>请确认密码<br>
+            <input type="repassword" name="repassword" pattern="^[A-Za-z0-9]+$"></p>
             <br><br>
-            您的居住地<br>
+            <p>您的居住地<br><br>
             <select name="area">
                 <option value="Hebei">河北省</option>
                 <option value="Shanxi">山西省</option>
@@ -54,7 +57,7 @@
                 <option value="Tibet">西藏自治区</option>
                 <option value="HongKong">香港特别行政区</option>
                 <option value="Macau">澳门特别行政区</option>
-            </select><br><br>
+            </select></p><br><br>
             您的手机号<br>
             <input type="text" name="phonenumber" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$"><br>
             常用设备<br>
@@ -64,9 +67,10 @@
             <input type="checkbox" name="switch">Nintendo Switch
             <br><br>
             你的出生日期<br>
-            <input type="text" name="birthday" pattern="^\d{4}-\d{1,2}-\d{1,2}" > <br><br>
+            <input type="text" type="date" name="birthday" pattern="^\d{4}-\d{1,2}-\d{1,2}" > <br><br>
             验证：输入答案<br>lnx的积分<br>
-            <input type="text">
+            <input type="text" name="captcha">
+            <input type="button" value="刷新">
             <br><br>
             请复查以下协议，并通过选择页面底部的复选框同意此协议。您必须同意这些协议条款才能继续。
             <br><br>
@@ -151,12 +155,12 @@
 
 </textarea><br>
             <input type="radio" name="attitude" value="agree">同意
-            <input type="radio" name="attitude" value="disagree" />不同意
-            <input type="submit" value="注册">
+            <input type="radio" name="attitude" value="agree" />不同意<br>
+            <p><input type="submit" value="注册" name="continue"></p>
     </form>
 </section>
 
-<body>
+
 
 </body>
 </html>
